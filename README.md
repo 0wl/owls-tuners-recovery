@@ -11,7 +11,7 @@
   <h1 align="center">How to: </h1>
 - Put the lua into %UserProfile%\AppData\Roaming\PopstarDevs\2Take1Menu\scripts
 
-- Go into scripts and turn on "Trusted Mode" OBS!!!! Trusted mode is required!!
+- Go into scripts and turn on "Trusted Mode", Trusted mode is required!!
 
 - Load the script and go into LS Car Meet
 
