@@ -7,6 +7,8 @@
 
 - 🛏️ Intended for AFK Usage.
 
+- 🔗 Preview: https://youtu.be/uI1iOWxwkTw
+
 
   <h1 align="center">How to: </h1>
 - Put the lua into %UserProfile%\AppData\Roaming\PopstarDevs\2Take1Menu\scripts
