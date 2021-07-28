@@ -2012,7 +2012,7 @@ local properties = {
         {997, "none"},
         {998, "none"},
         {999, "none"},
-        {1000, "Placeholder Unlock Set 412 Vehicle Name [none] [none] Tuned For Speed Racing Suit [Outfit]"},
+        {1000, "Tuned For Speed Racing Suit [Outfit]"},
 
     },
 }
@@ -2046,11 +2046,11 @@ menu.add_feature("Automatic REP Adder", "toggle", owl_recovery,
             local current_level = Get_REP(rep)
             if rep < 997430 then --If Smaller than 1k
                 if rep ~= properties.levellist[level][2]-1 then --Check so we dont spam
-                    menu.notify("You have received: " .. properties.unlocklist[current_level][2], properties.name, 10, 0x03fc0b)
                     stats.stat_set_int(gameplay.get_hash_key("MP0_CAR_CLUB_REP"), properties.levellist[level][2] - 1, true) --Sets MP0 REP
                     stats.stat_set_int(gameplay.get_hash_key("MP1_CAR_CLUB_REP"), properties.levellist[level][2] - 1, true) --Set MP1 REP
-                    menu.notify("Tuners REP set to " .. properties.levellist[level][2] - 1 .. " REP", properties.name, 3, 0x910041)
-                    menu.notify("You will receive " .. properties.unlocklist[level][2], properties.name, 3, 0x00ffd5)
+					if properties.unlocklist[current_level][2] ~= "none" then if string.find(properties.unlocklist[current_level][2], "Placeholder") == nil then menu.notify("You have received: " .. properties.unlocklist[current_level][2], properties.name, 10, 0x03fc0b) end end
+					if properties.unlocklist[level][2] ~= "none" then if string.find(properties.unlocklist[level][2], "Placeholder") == nil then menu.notify("You will receive " .. properties.unlocklist[level][2], properties.name, 3, 0x00ffd5) end end
+					menu.notify("Tuners REP set to " .. properties.levellist[level][2] - 1 .. " REP", properties.name, 3, 0x910041)
                 else
                     system.wait(15) --Timeout
                 end   
